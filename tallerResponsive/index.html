@@ -4,75 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sitio Responsivo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-        <div class="container">
-            <a class="navbar-brand" href="#">ALIMENTACIÓN</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Principal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Perros</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Gatos</a>
-                    </li>
-                </ul>
+    <div class="header">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">MASCOTAS</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-start" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 flex-column flex-lg-row">
+                        <form class="nav-item dropdown d-lg-none" role="search"> 
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Perros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Gatos</a>
+                        </li>
+
+                        <li class="nav-item dropdown d-lg-none"> 
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Opciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Barf</a></li>
+                                <li><a class="dropdown-item" href="#">Natural</a></li>
+                                <li><a class="dropdown-item" href="#">Cocida</a></li>
+                                <li><a class="dropdown-item" href="#">Mixta</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="d-none d-lg-flex" role="search"> 
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </div>
             </div>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            </form>
+        </nav>
+    </div>
+
+    <h2>Alimentación Fisiológica</h2>
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p>...la energía y vitalidad aumentan</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p>...la energía y vitalidad aumentan</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center align-items-center">
+                    <p>...ingredientes naturales y frescos</p>
+                </div>
+            </div>
         </div>
-    </nav>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
 
-    <!-- Contenedor principal -->
-    <div class="container mt-5">
+    <div class="container">
         <div class="row">
-            <!-- Opciones de la izquierda -->
-            <div class="col-md-3">
-                <div class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action">Barf</a>
-                    <a href="#" class="list-group-item list-group-item-action">Cocida</a>
-                    <a href="#" class="list-group-item list-group-item-action">Mixta</a>
-                    <a href="#" class="list-group-item list-group-item-action">Suplementos</a>
-                </div>
+            <div class="col-md-3 d-none d-lg-block">
+                <div class="opciones">Opción 1</div>
+                <div class="opciones">Opción 2</div>
+                <div class="opciones">Opción 3</div>
+                <div class="opciones">Opción 4</div>
             </div>
-
-            <!-- Contenido central -->
-            <div class="col-md-9">
-                <h2 class="text-center">Alimentación Fisiológica</h2>
-                <div id="textCarousel" class="text-center my-3">
-                    <span id="carouselText">...calidad de vida</span>
-                </div>
-
-                <!-- Bloques de texto -->
+            <div class="col-md-12 col-lg-9">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>La alimentación fisiológica para perros y gatos, basada en ingredientes naturales y frescos, ofrece múltiples beneficios para su salud. Este tipo de dieta mejora la digestión al facilitar la absorción de nutrientes y mantener un equilibrio saludable en la flora intestinal.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>Además, contribuye a la salud dental al reducir el sarro y la placa, ya que los alimentos naturales y crudos ayudan a mantener los dientes limpios. También se observa una mejora en la piel y el pelaje de las mascotas, gracias a nutrientes esenciales como proteínas de alta calidad y ácidos grasos.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>La energía y vitalidad aumentan, lo que se traduce en mayor bienestar y actividad. Finalmente, al fortalecer el sistema inmunológico, una dieta fisiológica puede prolongar la vida de las mascotas, ayudándolas a mantenerse sanas y felices durante más tiempo.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>Los chequeos anuales para nuestras mascotas son fundamentales para asegurar su bienestar y detectar cualquier problema de salud a tiempo. Estas visitas regulares permiten que el veterinario evalúe su estado general y haga recomendaciones específicas según la edad, raza y estilo de vida de cada animal.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>Durante un chequeo, se pueden detectar de manera temprana enfermedades que, de otro modo, pasarían desapercibidas. La detección precoz es clave para mejorar el pronóstico y la calidad de vida de las mascotas, permitiendo iniciar tratamientos antes de que el problema avance.</p>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-lg-4 col-md-6">
                         <p>Por último, las visitas regulares al veterinario fortalecen el vínculo entre la mascota y su tutor, ya que fomentan una atención preventiva y permiten resolver cualquier inquietud sobre el comportamiento o la salud de la mascota. En resumen, los chequeos anuales son una inversión en la felicidad y longevidad de nuestros compañeros de vida.</p>
                     </div>
                 </div>
@@ -80,7 +117,7 @@
         </div>
     </div>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </body>
 </html>
